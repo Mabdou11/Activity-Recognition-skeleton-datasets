@@ -1,5 +1,5 @@
 # KARD_realworld_only
-Realworld Skeleton data extracted from Kinect Activity Recognition Dataset
+Realworld and Screen Skeleton data extracted from Kinect Activity Recognition Dataset
 
 
 ## Only activities 1 to 12 are present at the moment.
