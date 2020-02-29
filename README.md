@@ -3,7 +3,7 @@ Realworld and Screen Skeleton data extracted from Kinect Activity Recognition Da
 
 No Depth Map, and no RGB data making it much lighter to download for those who only need skeleton data.
 
-## KARD contains 18 Activities. Each activity is performed 3 times by 10 different subjects.
+### KARD contains 18 Activities. Each activity is performed 3 times by 10 different subjects.
 -	1 Horizontal arm wave
 -	2 High arm wave
 -	3 Two hand wave
