@@ -1,0 +1,17 @@
+<package>
+  <description brief="feature_extraction_package">
+
+     feature_extraction_package
+
+  </description>
+  <author>latifanjum</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/feature_extraction_package</url>
+  <depend package="tf"/>
+  <depend package="roscpp"/>
+  <depend package="rospy"/>
+
+</package>
+
+

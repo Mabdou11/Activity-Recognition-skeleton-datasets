@@ -1,0 +1,57 @@
+#cmake_minimum_required(VERSION 2.4.6)
+#include($ENV{ROS_ROOT}/core/rosbuild/rosbuild.cmake)
+
+cmake_minimum_required(VERSION 2.8.3)
+project(My_feature_extraction_package)
+
+find_package(catkin REQUIRED COMPONENTS   geometry_msgs     std_msgs message_generation   roscpp  tf )
+find_package(PkgConfig)
+
+# Set the build type.  Options are:
+#  Coverage       : w/ debug symbols, w/o optimization, w/ code-coverage
+#  Debug          : w/ debug symbols, w/o optimization
+#  Release        : w/o debug symbols, w/ optimization
+#  RelWithDebInfo : w/ debug symbols, w/ optimization
+#  MinSizeRel     : w/o debug symbols, w/ optimization, stripped binaries
+#set(ROS_BUILD_TYPE RelWithDebInfo)
+
+catkin_package()
+include_directories( include ${catkin_INCLUDE_DIRS}   )
+link_directories( ${catkin_LIBRARY_DIRS})
+
+set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
+#set the default path for built libraries to the "lib" directory
+set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
+
+add_executable(features_positions src/features_positions.cpp)
+add_executable(features_Selected src/features_Selected.cpp)
+add_executable(Orientation_spatial src/Orientation_spatial.cpp)
+add_executable(features_All src/features_All.cpp)
+add_executable(Orientation_temporal src/Orientation_temporal.cpp)
+add_executable(features_Cov src/features_Cov.cpp)
+add_executable(esi_pfe src/esi_pfe.cpp)
+add_executable(robot_reaction_esi src/robot_reaction_esi.cpp)
+
+
+add_dependencies(features_positions My_feature_extraction_package_generate_messages_cpp)
+add_dependencies(features_All My_feature_extraction_package_generate_messages_cpp)
+add_dependencies(features_Selected My_feature_extraction_package_generate_messages_cpp)
+add_dependencies(Orientation_spatial My_feature_extraction_package_generate_messages_cpp)
+add_dependencies(Orientation_temporal features_extraction_package_generate_messages_cpp)
+add_dependencies(features_Cov My_feature_extraction_package_generate_messages_cpp)
+add_dependencies(esi_pfe My_feature_extraction_package_generate_messages_cpp)
+add_dependencies(robot_reaction_esi My_feature_extraction_package_generate_messages_cpp)
+
+#add_dependencies(Call  &(catkin_EXPORTED_TARGETS))
+#add_dependencies(openni_tracker  My_feature_extraction_package_generate_messages_cpp)
+
+target_link_libraries(features_positions ${catkin_LIBRARIES})
+target_link_libraries(features_All ${catkin_LIBRARIES})
+target_link_libraries(features_Selected ${catkin_LIBRARIES})
+target_link_libraries(Orientation_spatial ${catkin_LIBRARIES})
+target_link_libraries(Orientation_temporal ${catkin_LIBRARIES})
+target_link_libraries(features_Cov ${catkin_LIBRARIES})
+target_link_libraries(esi_pfe ${catkin_LIBRARIES})
+target_link_libraries(robot_reaction_esi ${catkin_LIBRARIES})
+
+

@@ -1,0 +1,29 @@
+<package>
+
+ <name> My_feature_extraction_package </name>
+ <version>0.2.0</version>
+  <description> feature_extraction_package. </description>
+
+  <author>latifanjum</author>
+  <maintainer email="marcus.liebhardt@yujinrobot.com">Brahim</maintainer>
+  <license>BSD</license>
+  <url>http://ros.org/wiki/feature_extraction_package</url>
+  <buildtool_depend>catkin</buildtool_depend>
+
+
+   <build_depend>msg_SVM</build_depend>
+    <build_depend>tf</build_depend>
+    <build_depend>roscpp</build_depend>
+    <build_depend>rospy</build_depend>
+    <build_depend>std_msgs</build_depend>
+
+
+   <run_depend>roscpp</run_depend> 
+   <run_depend>rospy</run_depend> 
+   <run_depend>tf</run_depend> 
+  <run_depend>std_msgs</run_depend>
+   <run_depend>msg_SVM</run_depend>
+ 
+</package>
+
+
