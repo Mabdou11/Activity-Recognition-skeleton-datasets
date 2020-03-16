@@ -1,4 +1,9 @@
-# KARD_Skeleton_data_only
+# Kinect Activity Recognition Datasets
+KARD Dataset, Florence 3D Actions, MSR 3D Action Dataset, UTKinect Dataset, CDTA Dataset.
+
+
+
+## KARD_Skeleton_data_only
 Realworld and Screen Skeleton data extracted from Kinect Activity Recognition Dataset
 
 No Depth Map, and no RGB data making it much lighter to download for those who only need skeleton data.
